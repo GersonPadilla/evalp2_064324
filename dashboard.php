@@ -10,28 +10,21 @@ if (!isset($_SESSION['auth'])) {
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Bienvenido al Dashboard</h1>
+<body class="bg-light">
 
-        <div class="cards">
-            <a class="card" href="figuras.php">
-                <h2>📐 Cálculo de Figuras</h2>
-                <p>Calcula áreas, perímetros y volúmenes</p>
-            </a>
+<div class="container py-5 text-center">
+    <h1 class="mb-4 text-primary">Bienvenido al Dashboard</h1>
 
-            <a class="card" href="triangulos.php">
-                <h2>🔺 Clasificación de Triángulos</h2>
-                <p>Identifica el tipo de triángulo según sus lados</p>
-            </a>
-
-            <a class="card logout" href="logout.php">
-                <h2>🚪 Cerrar Sesión</h2>
-                <p>Salir de tu cuenta</p>
-            </a>
-        </div>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="figuras.php" class="btn btn-outline-primary btn-lg">Cálculo de Figuras</a>
+        <a href="triangulos.php" class="btn btn-outline-success btn-lg">Clasificación de Triángulos</a>
+        <a href="logout.php" class="btn btn-outline-danger btn-lg">Cerrar Sesión</a>
     </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
