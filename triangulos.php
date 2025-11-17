@@ -6,32 +6,36 @@ if (!isset($_SESSION['auth'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Triángulos</title>
-    <script defer src="js/triangulos.js"></script>
+    <meta charset="UTF-8">
+    <title>Clasificación de Triángulos</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/triangulos.js"></script>
 </head>
 <body>
 
-<h1>Clasificación de Triángulos</h1>
+<div class="container">
+    <h1>🔺 Clasificación de Triángulos</h1>
 
-<form id="formTriangulo">
-    <label>Lado 1:</label>
-    <input id="lado1" type="number" min="1" required><br>
+    <div class="card">
+        <form id="formTriangulo">
+            <label for="lado1">Lado 1:</label>
+            <input id="lado1" type="number" min="1" required>
 
-    <label>Lado 2:</label>
-    <input id="lado2" type="number" min="1" required><br>
+            <label for="lado2">Lado 2:</label>
+            <input id="lado2" type="number" min="1" required>
 
-    <label>Lado 3:</label>
-    <input id="lado3" type="number" min="1" required><br>
+            <label for="lado3">Lado 3:</label>
+            <input id="lado3" type="number" min="1" required>
 
-    <button type="submit">Clasificar</button>
-</form>
+            <button type="submit">Clasificar</button>
+        </form>
+        <h3 id="resultado"></h3>
+    </div>
 
-<h3 id="resultado"></h3>
-
-<a href="dashboard.php">Volver</a>
+    <a class="btn-volver" href="dashboard.php">⬅ Volver al Dashboard</a>
+</div>
 
 </body>
 </html>

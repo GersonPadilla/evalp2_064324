@@ -6,41 +6,55 @@ if (!isset($_SESSION['auth'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Figuras</title>
-    <script defer src="js/figuras.js"></script>
+    <meta charset="UTF-8">
+    <title>Cálculo de Área y Volumen</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/figuras.js"></script>
 </head>
 <body>
 
-<h1>Cálculo de Área y Volumen</h1>
+<div class="container">
+    <h1>Cálculo de Área y Volumen</h1>
 
-<h2>Rectángulo</h2>
-<form id="formRect">
-    <label>Base:</label>
-    <input id="base" type="number" min="1" required><br>
+    <div class="cards">
+        <!-- Rectángulo -->
+        <div class="card">
+            <h2>📐 Rectángulo</h2>
+            <form id="formRect">
+                <label>Base:</label>
+                <input id="base" type="number" min="1" required>
 
-    <label>Altura:</label>
-    <input id="altura" type="number" min="1" required><br>
+                <label>Altura:</label>
+                <input id="altura" type="number" min="1" required>
 
-    <button type="submit">Calcular</button>
-</form>
-<p id="rectRes"></p>
+                <button type="submit">Calcular</button>
+            </form>
+            <p id="rectRes"></p>
+        </div>
 
-<h2>Cilindro</h2>
-<form id="formCil">
-    <label>Radio:</label>
-    <input id="radio" type="number" min="1" required><br>
+        <!-- Cilindro -->
+        <div class="card">
+            <h2>⚙️ Cilindro</h2>
+            <form id="formCil">
+                <label>Radio:</label>
+                <input id="radio" type="number" min="1" required>
 
-    <label>Altura:</label>
-    <input id="hCil" type="number" min="1" required><br>
+                <label>Altura:</label>
+                <input id="hCil" type="number" min="1" required>
 
-    <button type="submit">Calcular</button>
-</form>
-<p id="cilRes"></p>
+                <button type="submit">Calcular</button>
+            </form>
+            <p id="cilRes"></p>
+        </div>
+    </div>
 
-<a href="dashboard.php">Volver</a>
+    <a class="btn-volver" href="dashboard.php">⬅ Volver al Dashboard</a>
+</div>
+
+
 
 </body>
 </html>
+
